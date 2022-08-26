@@ -122,25 +122,36 @@
 
 {
     --------A Directory Loop-------
-    What is it?
+    What is it? 
         folder inside folder.
-    lets say we have a/b and we want to make shortcut of a as c inside b.
-    
+    lets say we have a and inside it we have b and we want to make shortcut of a as c inside b.
+
+    There are two way's of doing it.
+
     Using abolute path method:
-        ln -s path_of_dir new_name_of_dir = this will create a shortcut of directory
+        ln -s path_of_dir new_name_of_dir = this will create a shortcut of directory.
 
-        foreg: ln -s /home/krishna/Desktop/a c = this will create shortcut of a as c.
+            -> First navigate to the end directory means a/b.
+            -> then type this command (ln -s path_of_dir new_name_of_dir), in my case it is ln -s /home/krishna/Desktop/a c.
+            -> Done. your loop directory for a(folder) inside b(folder) has been created.
+            -> Now if you go inside a/b you will c and if you will open c then you get into loop 
+            foreg: /home/krishna/Desktop/a/b/c/b. 
+            Refer absolute_directory_loop.png image for better unerstanding.
 
-    NOTE: Here I have refered a as c and if you will do ls inside c you will get b, because c is refering a and inside a we have b. This will keep going as an tree. Refer directory_loop.png image or Use UI for better unerstanding.
-
-    Using relative path method:
+        Using relative path method:
         ln -s path_of_dir new_nam_of_dir = same comand as earlier.
 
-        foreg: ln -s ~/Desktop/a c
+            -> You have to manually go the directory (I have already explained about how you can use relative path)
+            -> Once you reached type this command: ln -s ~/Desktop/a c. 
+            Refer relative_directory_loop.png image for better unerstanding.
 
+        Now if you want to make directory loop of parent folder only then:
+            -> Navigate to the parent folder.
+            -> Type this command : ls -s .. f4(this is name of shortcut).
+            Refer parent_directory_loop.png image for better unerstanding.           
 }
 
- --------Day 3-------
+ --------ls Command options - Part 1-------
  {
     
  }
