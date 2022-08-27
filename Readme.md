@@ -152,7 +152,7 @@
 }
 
  <b>--------ls Command options - Part 1-------</b>
- { tell prakash to run this command
+ {
     ls -l = This command is used for long listing. It shows many informations about a file, like permission, no. of links, owner, group, file size, modification date, file name.
     {
         drwxrwxr-x 3 krishna krishna 4096 Aug 26 17:32  a
