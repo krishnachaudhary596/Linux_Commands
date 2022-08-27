@@ -152,6 +152,32 @@
 }
 
  --------ls Command options - Part 1-------
- {
-    
+ { <b>tell prakash to run this command<b>
+    ls -l = This command is used for long listing. It shows many informations about a file, like permission, no. of links, owner, group, file size, modification date, file name.
+    {
+        drwxrwxr-x 3 krishna krishna 4096 Aug 26 17:32  a
+
+        -> d: this in the beginning represents directory.
+        -> rwxrwxr-x: this represents permissions related to it.
+        -> 3: this represents no. of hardlinks.
+        -> krishna: This represents user.
+        -> krishna: This represents Group.
+        -> 4096: This represents size.
+        -> Aug 26: Aug 26 last modification date.
+        -> 17:32: This represents last modified time.
+        -> a: This represents file/directory name.
+    }
+
+    ls ­-a = This is a list all command. This will list all the files in your current working directories including hidden files that start with . Press ctrl + h unhide the file.
+    {
+        . = this represents current directory.
+        .. = This represents parent directory.
+    }
+
+    ls -t = This will list the files sorted by modification date. Newest first
+
+    ls -r = This will list the files in reversed fashion.
+
+    ls -i = This will list the index node number of each file in the current working directory.
+
  }
