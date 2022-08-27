@@ -19,7 +19,7 @@
 }
 
 
--------------Navigating the file system----------
+<b>-------------Navigating the file system----------</b>
 
 {
     root directory = From "home" to "Other Location" to inside "computer"
@@ -85,7 +85,7 @@
     cd - = directly takes you to your previous current path.
 }
 
--------------Hard Link VS Soft Link---------
+<b>-------------Hard Link VS Soft Link---------</b>
 {
     For linux links you need to remember iNode, which means index node.
 
@@ -98,7 +98,7 @@
                     ➢	File type
                     ➢	Number of link etc.
 
-    -------Types of Links--------
+    <b>-------Types of Links--------</b>
         1. Soft Link:
             ✔	Just like a shortcut in Window
             ✔	It is a pointer to the original file
@@ -121,7 +121,7 @@
 }
 
 {
-    --------A Directory Loop-------
+    <b>--------A Directory Loop-------</b>
     What is it? 
         folder inside folder.
     lets say we have a and inside it we have b and we want to make shortcut of a as c inside b.
@@ -151,8 +151,8 @@
             Refer parent_directory_loop.png image for better unerstanding.           
 }
 
- --------ls Command options - Part 1-------
- { <b>tell prakash to run this command<b>
+ <b>--------ls Command options - Part 1-------</b>
+ { tell prakash to run this command
     ls -l = This command is used for long listing. It shows many informations about a file, like permission, no. of links, owner, group, file size, modification date, file name.
     {
         drwxrwxr-x 3 krishna krishna 4096 Aug 26 17:32  a
