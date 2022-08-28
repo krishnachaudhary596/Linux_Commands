@@ -1,4 +1,6 @@
-{
+    Some basic linux data and time  commands:
+   
+   ```
     ctrl + alt + delete = terminal shortcut
 
     date = to check date and time. (Date will not work - case sensitive)
@@ -16,12 +18,12 @@
     clear = clear the terminal
 
     exit = close the terminal
-}
+   ```
 
 
 <b>-------------Navigating the file system----------</b>
 
-{
+```
     root directory = From "home" to "Other Location" to inside "computer"
 
     root dir also known as "/"
@@ -78,15 +80,16 @@
     }
    
 
-    cd .. or cd = takes you one directory back
-
+    cd .. = takes you one step directory back
+    cd   = cd without .. will take you root directory
     Now lets say if you want to go back in you previous working directory foreg: krishna@krishna:~/Desktop/f1/f2/f3$
 
     cd - = directly takes you to your previous current path.
-}
+```
 
 <b>-------------Hard Link VS Soft Link---------</b>
-{
+
+```
     For linux links you need to remember iNode, which means index node.
 
         1. Every file and directory has an inode.
@@ -114,14 +117,19 @@
             Note :- If the original File is deleted, the Hard link will still contain the data that were in the original file.
     ls -i = list the files with their index node.
 
-    ln old_file_name new_file_name = this will create hard link of the given file. (Now if you do ls -i then you will find hardlink of original and copy are same, there will be no issue if we delete original. Hard links are not allowed for directory.)
+    ln old_file_name new_file_name = this will create hard link of the given file.
+    (Now if you do ls -i then you will find hardlink of original and copy are same, 
+    there will be no issue if we delete original. Hard links are not allowed for directory.)
 
-    ln -s old_file_name new_file_name = this will create soft link of the given file.(Here the inode gets changed. Now if you do delete original file then you will find there will be issue. Soft links are allowed for directory(inode gets changed).))
+    ln -s old_file_name new_file_name = this will create soft link of the given file.
+    (Here the inode gets changed. Now if you do delete original file then you will find there will be issue. 
+    Soft links are allowed for directory(inode gets changed).))
     
-}
+```
 
-{
-    <b>--------A Directory Loop-------</b>
+<b>--------A Directory Loop-------</b>
+    
+ ``` 
     What is it? 
         folder inside folder.
     lets say we have a and inside it we have b and we want to make shortcut of a as c inside b.
@@ -149,11 +157,12 @@
             -> Navigate to the parent folder.
             -> Type this command : ls -s .. f4(this is name of shortcut).
             Refer parent_directory_loop.png image for better unerstanding.           
-}
+```
 
  <b>--------ls Command options - Part 1-------</b>
- {
-    ls -l = This command is used for long listing. It shows many informations about a file, like permission, no. of links, owner, group, file size, modification date, file name.
+ ```
+    ls -l = This command is used for long listing. It shows many informations about a file, like permission. 
+    no. of links, owner, group, file size, modification date, file name.
     {
         drwxrwxr-x 3 krishna krishna 4096 Aug 26 17:32  a
 
@@ -168,7 +177,8 @@
         -> a: This represents file/directory name.
     }
 
-    ls ­-a = This is a list all command. This will list all the files in your current working directories including hidden files that start with . Press ctrl + h unhide the file.
+    ls ­-a = This is a list all command. This will list all the files in your current working directories 
+    including hidden files that start with . Press ctrl + h unhide the file.
     {
         . = this represents current directory.
         .. = This represents parent directory.
@@ -180,4 +190,4 @@
 
     ls -i = This will list the index node number of each file in the current working directory.
 
- }
+```
