@@ -3,6 +3,8 @@
 
     ctrl + c = To kill any running process.
 
+    fn + alt + f2 then press r and hit enter = This will refresh linux window.
+
     date = to check date and time. (Date will not work - case sensitive)
 
     cal =  calender
@@ -255,7 +257,19 @@
         }
         <b>Rename and move file</b>
         {
-            
+            mv old_file_name new_file_name = This command wil change the file name.
+
+            mv old_file_name old_file_name = This command wil change the file name but it will overwrite the content of previous file.
+
+            You can also rename any hidden file in the same way vise versa.
+
+            mv old_dir_name new_dir_name = This command wil change the directory name.
+
+            mv file_name dir_name = This command will cut and paste the file into dir. Same can be applied to multiple files. Overwrite will happen for existing file.
+
+            mv -i file1 dir2 = This command will make it interactive whether we want to overwrite our content or not.
+
+            In the same way we can integrate other commands also.
         }
     }
 }
