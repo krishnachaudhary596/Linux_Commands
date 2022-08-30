@@ -208,21 +208,25 @@
     {
         <b>Touch Command</b>
         {
-            •	The touch command is the easiest way to create new, empty files.
-            •	If you want to create an empty file (not a directory) then you just type touch yourfilename
-            •	You can also create multiple files at the same time.
-                    For example: touch file1 file2 file3 will create 3 new empty files named file1,file2 and file3 respectively.
+           The touch command is the easiest way to create new, empty files.
+           If you want to create an empty file (not a directory) then you just type touch yourfilename
+           You can also create multiple files at the same time.
+                For example: touch file1 file2 file3 will create 3 new empty files named file1,file2 and file3 respectively.
+            NOTE: Try not to add any space in file name, this will create conflict for other operations.
+
         <b>Another use for the touch command</b>
-            •	touch is also used to update the timestamp (Modification date) for an existing file.
-            For example: if you already have a file named oldfile then touch oldfile will change the timestamp of oldfile to the current time.
+            Touch is also used to update the timestamp (Modification date) for an existing file.          For example: if you already have a file named oldfile then touch oldfile will change the timestamp of oldfile to the current time.
             <b>Similarily</b>
             touch oldfile1 oldfile2 oldfile3 will change the timestamp of oldfile1,oldfile2 and oldfile3 to the current time.
         }
         <b>Make and Remove Directory</b>
         {
-            mkdir = This command is used to create new directory. You can also create multiple direcotry at the same time. For example: mkdir dir1 dir2 dir3 will create 3 new empty directory named dir1 dir2 and dir3 respectively.
+            mkdir = This command is used to create new directory. You can also create multiple direcotry at the same time.
+            For example: mkdir dir1 dir2 dir3 will create 3 new empty directory named dir1 dir2 and dir3 respectively.
+            NOTE: Try not to add any space in directory name, this will create conflict for other operations.
             
-            rm dir or file = This command is used to remove empty directory. You can also remove multiple directory (but only empty one )at the same time. For example: rmdir dir1 dir2 dir3 will remove 3 new empty directory named dir1 dir2 and dir3 respectively.
+            rm dir or file = This command is used to remove empty directory. You can also remove multiple directory (but only empty one )at the same time.
+            For example: rmdir dir1 dir2 dir3 will remove 3 new empty directory named dir1 dir2 and dir3 respectively.
             NOTE: It will remove only empty directory.
 
             rm -R/r dir/file =  This command will remove non-empty directory and file. You can also remove multiple directory at the same time.
@@ -234,6 +238,24 @@
             v = verbose (summary)
 
             rm -r/Rv dir = Removes the directory with giving summary.
+        }
+    }
+    {
+        <b>Copy file to any location</b>
+        {
+            cp file1 file2 = This will copy content of file1 into file2 if you have file2 already exist else if you don't have file2 then it will create file2 and copy the content of file1 into it. Overwrite will happen here.
+
+            cp file1 file2 dir = This command will copy file1 & file2 in specific directory. Overwrite will happen here.
+
+            cp -i file1 file2 dir = This will work same as above command but now it's interactive so you can choose whether you want to overwrite or not.
+
+            cp -R dir1 dir2 = This command will copy entire dir1 to dir2, -R is used for recursive.
+
+            cp -Rv dir1 dir2 = This command will copy entire dir1 to dir2, -v is used for verbose.
+        }
+        <b>Rename and move file</b>
+        {
             
+        }
     }
 }
