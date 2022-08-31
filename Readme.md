@@ -214,7 +214,6 @@
            If you want to create an empty file (not a directory) then you just type touch yourfilename
            You can also create multiple files at the same time.
                 For example: touch file1 file2 file3 will create 3 new empty files named file1,file2 and file3 respectively.
-            NOTE: Try not to add any space in file name, this will create conflict for other operations.
 
         <b>Another use for the touch command</b>
             Touch is also used to update the timestamp (Modification date) for an existing file.          For example: if you already have a file named oldfile then touch oldfile will change the timestamp of oldfile to the current time.
@@ -225,7 +224,6 @@
         {
             mkdir = This command is used to create new directory. You can also create multiple direcotry at the same time.
             For example: mkdir dir1 dir2 dir3 will create 3 new empty directory named dir1 dir2 and dir3 respectively.
-            NOTE: Try not to add any space in directory name, this will create conflict for other operations.
             
             rm dir or file = This command is used to remove empty directory. You can also remove multiple directory (but only empty one )at the same time.
             For example: rmdir dir1 dir2 dir3 will remove 3 new empty directory named dir1 dir2 and dir3 respectively.
@@ -270,6 +268,65 @@
             mv -i file1 dir2 = This command will make it interactive whether we want to overwrite our content or not.
 
             In the same way we can integrate other commands also.
+        }
+        <b>Change extension and use of "file" command</b>
+        {
+            Changing the file extension will not affect actuall file.
+            foreg: mv logo.png logo
+            Above I have removed the extension of file but it will still work as usual.
+
+            file filename = This file command is helpful to check the type of file.   
+        }
+        <b>How to add space in filename</b>
+        {
+            mkdir 'file with space' = You can use single quotes or double quotes to add space while creating file or directory.
+
+            mkdir my\ cat = Work as above 
+            \ = escape character, \\, \\\\
+        }
+        <b>Add special character in filename</b>
+        {
+            mkdir \$file or mkdir \"file\" = Both the commands will create file with special characters.
+        }
+        <b>Autocompletion and Keyboard Shortcuts</b>
+        {
+            tab key can be used for autocompletion in terminal.
+
+            Ctrl + A	Move your	cursor to the beginning of the line.
+		
+            Ctrl + E	Move your cursor to the End of the line (E ­­ > end).
+
+            Ctrl + D	Delete the character at the cursor location.
+
+            Ctrl + F	Move your cursor Forward one character. Same as your right arrow key.
+                    
+            Ctrl + B	Move your cursor Backward one character. Same as your left arrow key.
+                    
+            Alt + F	Move your cursor Forward one word (Jump to the next word).
+
+            Alt + B	Move your cursor Backward one word (Jump to the previous word).
+
+            Alt + L	Convert all the characters beginning from the cursor location to end of the word to Lowercase.
+                
+            Alt + U	Convert all the characters beginning from the cursor location to end of the word to Uppercase.
+                
+            Ctrl + K	Cut the text from the cursor location to the end of the line. In Linux, we say Kill text Just like Cut text)
+                
+            Ctrl + U	Cut the text from the cursor location to the beginning of the line.
+
+            Ctrl + Y	Paste the text that you did cut. Pasting in Linux is Yanking.
+
+            Ctrl + L	Clear the screen just like the clear command.
+
+        }
+    }
+}
+{
+    <b>Viewing and Editing files in Linux</b>
+    {
+        <b>Graphical Text Edit (gedit)</b>
+        {
+            
         }
     }
 }
