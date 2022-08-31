@@ -322,11 +322,11 @@
     }
 }
 {
-    <b>Viewing and Editing files in Linux</b>
+    <b>Viewing and Editing files in Linux</b>\
     {
         <b>Graphical Text Edit (gedit)</b>
         {
-            
+
         }
     }
 }
