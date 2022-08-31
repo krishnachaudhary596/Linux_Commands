@@ -323,10 +323,34 @@
 }
 {
     <b>Viewing and Editing files in Linux</b>\
-    {
-        <b>Graphical Text Edit (gedit)</b>
-        {
+    {\
+        <b>Graphical Text Edit (gedit)</b>\
+        {\
+            gedit filename = This command will open existing or make a new file in gedit directly.
 
-        }
+            NOTE: You can make a blank file if you want but it will not save in directory until you save the blank file. (ctrl+O or save button)
+        }\
+         <b>Nano test editor OR Command line text editor</b>
+         {
+            nano filename = This command will open text editor in terminal. You can also create new file and it will directly in nano text editor.
+         }
+         <b>History of command line</b>
+         {
+            You can see your recently used command using up and down arrow. But if you want to see all the history in one go.
+
+            history = This command will let you see all the recently used commands in one go.
+
+            history 10 = You can see last 10 command history. You can give any number.
+
+            !99 = here if you combine exclamation mark with any number then the command which would be present in that line will shown. You can give any number.
+
+            history -c = To erase entire history of command line.
+         }
+         <b>Viewing file with less Command</b>
+         {
+            less filename = This command will open text file in read mode only.
+
+            less --help = This will open help menu for less command.
+         }
     }
 }
