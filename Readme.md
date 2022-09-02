@@ -255,7 +255,7 @@
         }
         <b>Rename and move file</b>
         {
-            mv old_file_name new_file_name = This command wil change the file name.
+            mv old_file_name new_file_name = This command will change the file name.
 
             mv old_file_name old_file_name = This command wil change the file name but it will overwrite the content of previous file.
 
@@ -348,9 +348,138 @@
          }
          <b>Viewing file with less Command</b>
          {
-            less filename = This command will open text file in read mode only.
+            less filename = This command will open text file in read mode only in a new window because it's
+            a program.
+            To quit from the terminal pres colon (:) and q.
 
             less --help = This will open help menu for less command.
          }
+         <b>"CAT" and "TAC" command use</b>
+         {
+            cat filename = Opens the file in view mode only. You can open multiple files with,
+            it will follow the order of filename as you give.
+
+            tac filename =  You can files in reverse order, works exactly as cat but in reverse order.
+         }
+         <b>"Head", "Tail" and "wc" command</b>
+         {
+            head filename = Head command will display no. of line your file from the top. By default
+            it will print 10 lines.
+
+            head -n no.lines filename = To display lines as per your choice use this command and
+            give no.of lines.
+
+            tail filename = Tail command will display no. of line your file from the down. By default
+            it will print 10 lines.
+            
+            tail -n no.lines filename = To display lines as per your choice use this command and
+            give no.of lines.
+
+            wc = This will count no.of words, no.of lines, size in bytes in a file.
+
+            wc -l filename = This will count no.of line in a file. Here l is used for line.
+
+            wc -w filename = This will count no.of words in a file.
+
+            wc -c filename = This will count no.of characters in a file.
+
+            wc -L filename = This will size of longest word in a file.
+         }
+         <b>Combine Multiple Commands with 2 Methods</b>
+         {
+            Here order matter's as per your command.
+            We will use ; and && to combine two different commands.
+
+            foreg: cal; date; mkdir files = This command will display calender, date and make a directory
+            named as files.
+
+            foreg2: cal; DATE; mkdir files = not work for date command as it is invalid. Rest will work.
+
+            foreg3: touch text; mv text file; cal; date = making a file then moving it to directory
+             then rest of the commands.So we can some valid complex things also.
+
+            Same things can be used with &&. Syntax command1 && command2.
+
+            foreg1: cal; DATE; mkdir files = not work for date command Rest will be ignored also.
+         }
+    }
+}
+{
+    <b>Types of command</b>
+    {
+        <b>Types of command</b>
+        {
+            1. Executable Programs = You will see them in bins folder they look like gear icon.
+            2. Shell Builtins = Command which runs inside terminal itself like cd command.
+            3. Shell Script = You will see them in bins folder they look like > icon.
+            4. Alias = Commands which are used as an alias. Like ls, it's full form is ls --color=auto,
+                        but we use it as ls and it works.
+            
+            type/file command_name = This can be use to check type of the command some times it also shows the location. For file command you need to be in that directory where your file is located.
+            Shared object = Executable           
+        }
+        <b>The which command use</b>
+        {
+            which command_name= Display's an executable commands location.
+            Foreg: which date = /bin/date
+        }
+        <b>Help and Manual Command</b>
+        {
+            help is used with shell builtin command.
+
+            help shell_bulltin = This is will display help section with the given command.
+
+            man executable_command = This is will display help section with the given command.
+        }
+        <b>Whatis command</b>
+        {
+            whatis command_name = This will give one-line description of executable commands.
+        }
+    }
+}
+{
+    <b>Wildcards and Alias in Linux</b>
+    {
+        Wildcard is a symbol that represents one or more character.
+        * represents(matches) any character.
+        ? represents(matches) single character.
+        [] Range
+
+        Lets say you have to copy all the files in a single directory.
+
+        cp * dir = This will copy all the files of current location to the directory.
+        
+        rm * dir = This will delete all the files of current location to the directory.
+
+        In the same way we can use * with other commands also...
+
+        cp file* dir = Now this will copy all the files whose name will start with file and * means
+        and rest means can be anything.
+
+        cp *.txt dir, cp file*.txt, cp n*e dir
+
+        cp file?.txt dir = This will copy all the files which start with name file but after the name
+        file ? will only skip single character means after name file any one character will be ignored.
+
+        cp ?g dir, cp g? dir, cp f?l*.txt dir.
+
+        cp [abc]* dir = This command says copy those files whose name start from a or b or c and rest
+        can be anything.
+
+        cp [!abc]* dir = This command says copy all files except which start from a or b or c and rest
+        can be anything. 
+        cp [1-9]* dir = This command will all the files whose name start from 1-9 and rest can be anything.
+
+        cp [[:lower:]]* dir = This command will all the files which are in lowercase in starting.
+
+        cp [[:upper:]]* dir = This command will all the files which are in uppercase in starting.
+
+        cp [[:digit:]]* dir = This command will all the files which start with digit in starting.
+
+        cp [[:alpha:]]* dir = This command will all the files which start with alphabet in starting.
+
+        cp [![:alpha:]]* dir = First character should not be in alphabet rest is okay.
+
+        cp [![:alpha:]]* dir = This will copy alpha-numeric character. 
     }
 }
